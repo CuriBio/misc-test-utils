@@ -42,6 +42,10 @@ def _get_vault() -> Vault:
     return _vault_namespace.vault
 
 
+def clear_vault() -> None:
+    _vault_namespace.vault = None
+
+
 @pytest.fixture(scope="session", name="session_resource_prefix")  # type: ignore
 def fixture_session_resource_prefix() -> Generator[str, None, None]:
     vault = get_vault()

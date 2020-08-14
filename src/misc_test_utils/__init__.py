@@ -5,6 +5,7 @@ from . import vault
 from .misc_test_utils import copy_dict_with_key_removed
 from .misc_test_utils import domain_model_validate_internals_test
 from .misc_test_utils import domain_model_validation_test
+from .vault import clear_vault
 from .vault import fixture_session_dns_resource_prefix
 from .vault import fixture_session_resource_prefix
 from .vault import get_vault
@@ -18,6 +19,7 @@ __all__ = [
     "domain_model_validate_internals_test",
     "set_vault",
     "get_vault",
+    "clear_vault",
     "vault",
     "misc_test_utils",
     "VaultNotSetError",

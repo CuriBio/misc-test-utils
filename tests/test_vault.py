@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
+from misc_test_utils import clear_vault
 from misc_test_utils import fixture_session_dns_resource_prefix
 from misc_test_utils import fixture_session_resource_prefix
 from misc_test_utils import get_vault
 from misc_test_utils import set_vault
-from misc_test_utils import vault
 from misc_test_utils import VaultNotSetError
 from misc_test_utils import VaultSetToProductionTierError
 import pytest
@@ -19,7 +19,7 @@ __fixtures__ = [
 
 
 def test_get_vault__raises_error_if_vault_not_set():
-    vault._vault_namespace.vault = None  # pylint: disable=protected-access
+    clear_vault()
     with pytest.raises(VaultNotSetError):
         get_vault()
 
@@ -36,7 +36,7 @@ def test_session_resource_prefix__creates_the_string(
     assert isinstance(session_resource_prefix, str)
     assert "zztest" in session_resource_prefix
     # clean up
-    vault._vault_namespace.vault = None  # pylint: disable=protected-access
+    clear_vault()
 
 
 def test_session_dns_resource_prefix__replaces_underscores_with_hyphens(
