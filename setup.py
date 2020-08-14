@@ -14,7 +14,7 @@ setup(
     license="MIT",
     packages=find_packages("src"),
     package_dir={"": "src"},
-    install_requires=["pytest>=5.4.3", "secrets_manager>=0.4"],
+    install_requires=["pytest>=5.4.3", "secrets_manager>=0.4", "domain-model==0.3"],
     zip_safe=False,
     include_package_data=True,
     classifiers=[
