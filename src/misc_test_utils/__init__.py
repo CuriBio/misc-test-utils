@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Helper functions for running unit / integration tests."""
+from . import misc_test_utils
 from . import vault
 from .misc_test_utils import copy_dict_with_key_removed
 from .misc_test_utils import domain_model_validate_internals_test
@@ -18,6 +19,7 @@ __all__ = [
     "set_vault",
     "get_vault",
     "vault",
+    "misc_test_utils",
     "VaultNotSetError",
     "VaultSetToProductionTierError",
     "fixture_session_resource_prefix",
