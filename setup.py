@@ -7,14 +7,14 @@ from setuptools import setup
 setup(
     name="misc_test_utils",
     version="0.2",
-    description="Persisting objects.",
+    description="Utility functions for running unit and integration tests. With a focus on domain models and MySQL databases.",
     url="https://github.com/CuriBio/misc-test-utils",
     author="Curi Bio",
     author_email="contact@curibio.com",
     license="MIT",
     packages=find_packages("src"),
     package_dir={"": "src"},
-    install_requires=["pytest>=5.4.3", "secrets_manager>=0.4", "domain-model==0.3"],
+    install_requires=["pytest>=5.4.3", "secrets-manager>=0.4", "domain-model==0.3"],
     zip_safe=False,
     include_package_data=True,
     classifiers=[
