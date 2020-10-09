@@ -1,4 +1,4 @@
 # pip install -r requirements.txt
-pytest==6.0.2
+pytest==6.1.1
 secrets_manager==0.4
 domain-model==0.3
